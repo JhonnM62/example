@@ -1,0 +1,12 @@
+<form id="miFormulario">
+  <input type="text" name="nombre" placeholder="Nombre" />
+  <input type="email" name="correo" placeholder="Correo electrónico" />
+  <input type="submit" value="Enviar" />
+</form>
+<script>
+  const miFormulario = document.getElementById("miFormulario");
+  miFormulario.addEventListener("submit", function (event) {
+    event.preventDefault(); // Evita que el formulario se envíe de forma predeterminada
+    console.log("Formulario enviado. Datos:", new FormData(miFormulario));
+  });
+</script>
